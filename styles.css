@@ -64,17 +64,76 @@
     Latest News Section
 *************************/
 
+/* Overall section wrapper */
 .latest-news-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 20px;
-    margin: 0 300px;
-   
+    width: 1200px;
+    margin: 0 auto;
 }
-.latest-news-item {
-    background:green;
-    height: 200px;
+
+.latest-news-wrapper h1 a {
+    text-decoration: none;
+    color: #f42;
+}
     
+.latest-news-wrapper h1 a:hover {
+    color: black;
+}
+
+/* Wrapper for all news item containers */
+.latest-news-items {
+    display: grid;
+   
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+   
+/* Invidual news item container */
+.latest-news-item {
+    height: 250px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+.item1-img {
+    width: 100%;
+    height: 150px;
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/rivian-michigan-car-legislation-future-ev-startup-sales-prevented-old-innovation-480x270.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.news-item-title a {
+    color: black;
+    text-decoration: none;
+}
+
+.news-item-title a:hover {
+    color: #f42;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 68, 34, .5);
+}
+
+.latest-news-byline {
+    list-style-type: none;
+}
+
+.latest-news-byline li {
+    display: inline-block;
+    font-size: 14px;
+    color: #999;
+}
+
+.latest-news-byline a {
+    color: #999;
+    text-decoration: none;
+}
+
+.latest-news-byline a:hover {
+  
+    color: #555;
 }
 
 /*************************
@@ -113,6 +172,7 @@
     margin: 20px;
     display: grid;
     grid-gap: 5px;
+   
  
 }
 
@@ -154,6 +214,12 @@
     background: url("images/gear.png");
     background-size: cover;
     background-position: center;
+}
+
+.tech {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/07/robots-368x276.jpg");
+    background-size: cover;
+    background-position: top;
 }
 
 .popular h5 {
@@ -235,6 +301,16 @@
 
 }
 
+.tech-latest-img {
+    grid-area: image;
+    height: 100px;
+    width: 100px;
+    background: url(" https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/1-18.jpg");
+    background-size: cover;
+    background-position: center;
+   
+}
+
 .latest h5 {
     grid-area: header;
     align-self: end; 
@@ -299,7 +375,9 @@
             "top-article"
     }
 
+    
     .latest-news-wrapper,
+    .latest-news-items,
     .investments-wrapper {
         grid-template-columns: 1fr;
         margin: 0;
