@@ -1,0 +1,316 @@
+/*************************
+    Simple Reset
+*************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/*************************
+    Main Page Wrapper
+*************************/
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/*************************
+        Header
+*************************/
+
+
+
+/*************************
+    Hero Section
+*************************/
+.hero {
+    display: grid;
+    grid-gap: 10px;
+    
+
+    grid-template-areas:
+        "hero   hero   hero  cta"
+        "hero   hero   hero  top-article";
+}
+
+.hero-article{
+    grid-area: hero;
+    min-height: 340px;
+    min-width: 70vw;
+    background: white url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.cta {
+    grid-area: cta;
+    min-height: 150px;
+    background: white url(images/TNW2020.jpg);
+    background-size: cover;
+    background-position: left;
+    
+}
+
+.top-article {
+    grid-area: top-article;
+    min-height: 150px;
+    background: white url(images/cover.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*************************
+    Latest News Section
+*************************/
+
+.latest-news-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    margin: 0 300px;
+   
+}
+.latest-news-item {
+    background:green;
+    height: 200px;
+    
+}
+
+/*************************
+    Investments Section
+*************************/
+
+.investments-wrapper {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 0 300px;
+}
+
+.investment {
+    background:blue;
+    height: 200px;
+    
+}
+
+/*************************
+    News Sections 
+*************************/
+
+/** Overall section wrapper */
+.section-wrapper {
+    display:grid;
+    width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+}
+
+/* Individual Section Container */
+.section {
+    width: 400px;
+    margin: 20px;
+    display: grid;
+    grid-gap: 5px;
+ 
+}
+
+/** News Section Header **/
+.section h1 a {
+    text-decoration: none;
+    color: #f42;
+}
+
+.section h1 a:hover {
+    color: black;
+}
+
+/** Popular (Lead) Article/Image **/
+.popular{
+    width: 100%;
+    height: 200px;
+    background: white ;
+  
+    color: white;
+    display: flex;  
+    flex-direction: column; 
+    justify-content: flex-end;
+}
+
+.hard-fork {
+    background: url("images/hindenburgnikola-368x276.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.apps {
+    background: url("images/Photoshop-Sky-Replacement-368x276.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.gear {
+    background: url("images/gear.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.popular h5 {
+    text-transform:uppercase; 
+    padding: 5px;
+}
+
+.popular a {
+    text-decoration: none;
+    color: white;
+}
+
+.popular a:hover {
+    text-decoration:underline;
+    text-decoration-color: #999;
+}
+
+.section-byline li {
+    display: inline-block;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.section-byline a {
+    color: #ccc;
+}
+
+.section-byline a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/** Latest News within Section **/
+
+.latest {
+    background: #fff4f2;
+    display: grid;
+    grid-template-areas:
+        "header image"
+        "title  image";
+    justify-items: start;
+    color: #f42;
+}
+
+.latest a {
+    text-decoration: none;
+    color: #f42;
+}
+
+.latest a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 68, 34, .5);
+}
+.hard-fork-latest-img {
+    grid-area: image;
+    height: 100px;
+    width: 100px;
+    background: url("images/bitcoin.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.apps-latest-img {
+    grid-area: image;
+    height: 100px;
+    width: 100px;
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/EbIrpRwVcAEI6ws.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.gear-latest-img {
+    grid-area: image;
+    height: 100px;
+    width: 100px;
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/Chromecast-sabrina.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.latest h5 {
+    grid-area: header;
+    align-self: end; 
+}
+
+.latest h3 {
+    grid-area: title;
+    align-self: start;  
+}
+
+/** Top 5 Articles in Section **/
+
+.article-list li {
+    margin: 5px 20px;
+    padding: 5px;
+    border-bottom: solid 2px #f4f4f4;
+    color: #f42;
+}
+
+.article-list a {
+    text-decoration: none;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, .5);
+}
+
+.article-list a:hover {
+    color: black;
+}
+
+
+
+
+/*************************
+    Deals Section
+*************************/
+
+.deals-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.deal{
+    background: blue;
+    height: 200px;
+}
+
+/*************************
+        Footer
+*************************/
+
+
+/*************************
+        Media Queries
+*************************/
+
+@media (max-width:500px){
+    .hero { 
+        grid-template-areas:
+            "hero"
+            "cta"
+            "top-article"
+    }
+
+    .latest-news-wrapper,
+    .investments-wrapper {
+        grid-template-columns: 1fr;
+        margin: 0;
+     
+    }
+
+    .investment:last-child{
+        display: none;
+    }
+
+    .section-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
