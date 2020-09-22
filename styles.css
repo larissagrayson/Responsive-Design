@@ -89,8 +89,8 @@
    
 /* Invidual news item container */
 .latest-news-item {
-    height: 250px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -99,7 +99,7 @@
 
 .item1-img {
     width: 100%;
-    height: 150px;
+    height: 270px;
     background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/rivian-michigan-car-legislation-future-ev-startup-sales-prevented-old-innovation-480x270.png");
     background-size: cover;
     background-position: center;
@@ -140,7 +140,7 @@
     Investments Section
 *************************/
 
-.investments-wrapper {
+.investments {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
@@ -148,10 +148,43 @@
 }
 
 .investment {
-    background:blue;
-    height: 200px;
-    
+    background:#fffaf8;
+    grid-gap: 20px;
+    width: 300px;
+    display: grid;
 }
+
+.company-header {
+    background: #ffece7;  
+    position: relative;
+}
+
+.company-header img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.company,
+.net-worth,
+.series {
+    padding-left: 80px;
+}
+
+
+
+
+.company  {
+    background: #f54121;
+    color: white;
+   
+   
+}
+
+.investment-news {
+    border-top: solid 1px #f54121;
+}
+
 
 /*************************
     News Sections 
@@ -353,18 +386,24 @@
     width: 1200px;
     display: grid;
     grid-template-areas:
-    "link1 link2"
+    "links links"
     "content content";
     grid-gap: 20px;
 }
 
-.deals-wrapper h1 {
-    grid-area: link1;
+
+
+.deals-header {
+    grid-area: links;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
 }
 
-.deals-wrapper a {
-    grid-area: link2;
+.all-deals {
+    justify-self: end;
 }
+
+
 
 .deals-wrapper a,
 .deals-wrapper h1 a {
@@ -375,10 +414,6 @@
 .deals-wrapper a:hover,
 .deals-wrapper h1 a:hover {
     color: black;
-}
-
-.deals-wrapper a {
-    justify-self: end;
 }
 
 .deals{
@@ -432,6 +467,80 @@
         Media Queries
 *************************/
 
+@media (max-width:1024px){
+   
+    /* Wrapper for all news item containers */
+    .latest-news-items,
+    .deals { 
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .section-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+@media (max-width: 728px){
+
+    .hero { 
+        grid-template-areas:
+            "hero"
+            "cta"
+            "top-article"
+    }
+
+    .hero-article,
+    .cta,
+    .top-article {
+        width: 550px;
+        height: 170px;
+    }
+    
+  
+    .latest-news-items,
+    .section-wrapper,
+    .deals,
+    .investments{
+        grid-template-columns: 1fr;
+      
+    }
+
+    .deals-wrapper,
+    .section-wrapper,
+    .latest-news-wrapper,
+    .investments{
+        margin: 0;
+        width: 100vw;
+    }
+   
+    .deal{
+        display: grid;
+        width: 500px;
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+         "image header"
+         "image byline";
+        align-items: center;   
+    }
+
+
+    .deal-img {
+        grid-area: image;
+        height: 100px;
+        width: 100px;
+    }
+
+    .deal-header {
+        grid-area: header;
+    }
+
+    
+
+}
+
+/*
 @media (max-width:500px){
     .hero { 
         grid-template-areas:
@@ -441,9 +550,9 @@
     }
 
     
-    .latest-news-wrapper,
+    
     .latest-news-items,
-    .investments-wrapper {
+    .investments {
         grid-template-columns: 1fr;
         margin: 0;
      
@@ -453,7 +562,56 @@
         display: none;
     }
 
-    .section-wrapper {
+    .section,
+    .deals {
         grid-template-columns: 1fr;
     }
+}*/
+
+/*
+.test {
+
+    background: green;
+
+    width: 500px;
+
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+
+    grid-template-areas:
+
+     "image header"
+
+     "image byline";
+
+     align-items: center;
+
 }
+
+
+
+.test-img {
+
+    grid-area: image;
+
+    size: 100px;
+
+
+
+    
+
+}
+
+
+
+
+
+
+
+.deal-header {
+
+    grid-area: header;
+
+
+}*/
