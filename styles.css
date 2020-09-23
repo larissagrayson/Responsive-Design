@@ -60,7 +60,6 @@ header {
     display: grid;
     grid-gap: 10px;
     
-
     grid-template-areas:
         "hero   hero   hero  cta"
         "hero   hero   hero  top-article";
@@ -113,7 +112,7 @@ header {
 
 /* Wrapper for all news item containers */
 .latest-news-items {
-    border: 2px solid red;
+  
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
@@ -552,9 +551,37 @@ header {
 .deal-img {
     background: url("https://cdnp1.stackassets.com/d2f3f6671668103cd2b2dee90fac171f712f236d/store/89d853fbd42b8ab356b517bb5fd19abf0a5cc68204960e56327147c04603/product_41976_product_shots1.jpg");
     background-size: cover;
-    background-position: center top;
-    height: 200px;
-    width: auto;
+    background-position: center ;
+    height: 300px;
+   
+}
+
+.deal2-img {
+    background: url("https://cdnp2.stackassets.com/e44f78edfcb13200279a2501b09d16c02b10f739/store/c200444f3c9de39ea53f56d44028fbc6277a145194261a66d8a2ed1b0a56/product_27619_product_shots1.jpg")
+}
+
+.deal3-img {
+    background: url("https://cdnp3.stackassets.com/0b442829152188ef5c1de0aff7d72820282f26e0/store/73b9b30bec03d67a0c89bae3aaaddafc5a59895b1edd5194d61ab010f926/sale_20564_primary_image.jpg")
+}
+
+.deal4-img {
+    background: url("https://cdnp0.stackassets.com/2914aa3b38a186242cb7b1bc428851d9b94a7ee8/store/8f5bccf2a40516fcccf397314e43edbe23617e4de585b3efa404a49b6594/sale_40096_primary_image.jpg")
+}
+
+.deal5-img {
+    background: url("https://cdnp1.stackassets.com/b32e4360ae96e08172f2ff38c0e6b43ae6bc05a5/store/79637342c55a2f130660562c5cfd270a7441f3d411ad18efb1e915d38a19/sale_22415_primary_image.jpg")
+}
+
+.deal6-img {
+    background: url("https://cdnp0.stackassets.com/a875072fa31f35279ce85438b376249c54eca996/store/8534f1826bec31d741297d74ee8a30edc0f492f8f74cd08aa4ed0103d42a/sale_14523_primary_image.jpg")
+}
+
+.deal7-img {
+    background: url("https://cdnp2.stackassets.com/92bcda7b60a533e70b2fa0397cbcadc07252146a/store/bb31e60362b9c63654e22bfb415c89089ee735194d2a0b203557504eca16/sale_39532_primary_image.jpg")
+}
+
+.deal8-img {
+    background: url("https://cdnp2.stackassets.com/1f3cdb1baaea07ba05d9952161f49ca4bd3fcd84/store/fe69dffa8f144724e2336a5efb83c2d7034f1822fa64fe428121ae35021a/sale_22777_primary_image.jpg")
 }
 
 .deal-header a {
