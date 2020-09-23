@@ -12,19 +12,51 @@
 *************************/
 .wrapper {
     display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-areas: 
+    " header header header "
+    " . hero . "
+    " . ad1 . "
+    " . latest . "
+    " . ad2 . "
+    " . investments . "
+    " . news . "
+    " . deals . "
+    " . ad3 . "
+    " footer footer footer ";
+
     grid-gap: 20px;
 }
 
 /*************************
+       Ads
+*************************/
+.ad1 {
+    grid-area: ad1;
+}
+
+.ad2 {
+    grid-area: ad2;
+}
+
+.ad3 {
+    grid-area: ad3;
+}
+
+
+/*************************
         Header
 *************************/
-
+header {
+    grid-area: header;
+}
 
 
 /*************************
     Hero Section
 *************************/
 .hero {
+    grid-area: hero;
     display: grid;
     grid-gap: 10px;
     
@@ -66,8 +98,8 @@
 
 /* Overall section wrapper */
 .latest-news-wrapper {
-    width: 1200px;
-    margin: 0 auto;
+    grid-area: latest;
+   
 }
 
 .latest-news-wrapper h1 a {
@@ -81,23 +113,24 @@
 
 /* Wrapper for all news item containers */
 .latest-news-items {
+    border: 2px solid red;
     display: grid;
-   
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
 }
    
-/* Invidual news item container */
+/* Individual news item container */
 .latest-news-item {
     height: 300px;
-    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     
 }
 
-.item1-img {
+
+
+.item-img {
     width: auto;
     height: 270px;
     background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/rivian-michigan-car-legislation-future-ev-startup-sales-prevented-old-innovation-480x270.png");
@@ -105,7 +138,33 @@
     background-position: center;
 }
 
+.item2-img {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/Untitled-design-7-516x270.png");
+}
 
+.item3-img {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/tesla-battery-day-car-ev-future-battery-day-electric-cars-elon-musk-480x270.jpeg");
+}
+
+.item4-img {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/Untitled-design-79-516x270.png");
+}
+
+.item5-img {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/08/bitcoin_today-header_bitcoin_today-512x270.jpg");
+}
+
+.item6-img {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/strategy-outsmart-competition-growth-gq-516x270.png");
+}
+
+.item7-img {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/now-or-never-gq-516x270.png");
+}
+
+.item8-img {
+    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/Untitled-design-2020-09-03T133902.980-516x270.png");
+}
 
 .news-item-title a {
     color: black;
@@ -142,19 +201,17 @@
     Investments Section
 *************************/
 .investments-wrapper {
-    margin: 0 auto;
-   
+    grid-area: investments;
+ 
     display: grid;
-    
-    
+  
     grid-template-areas:
         "header links"
         "investments investments";
     justify-items: center;
     align-items: center;
     grid-gap: 20px;
-    
-    border: 2px solid purple;
+  
 }
 .investments-wrapper h1 a,
 .investments-wrapper li a {
@@ -169,14 +226,14 @@
 
 
 .investments-wrapper h1{
-    border: 2px solid;
+  
     justify-self: start;
    
     
 }
 
 .investments-links {
-    border: 2px solid orange;
+ 
     list-style-type: none;
     grid-area: links;
     justify-self: end;
@@ -184,26 +241,26 @@
 
 .investments-links li {
     display:inline-block;
+    border-right: 2px solid #f42;
+    padding: 2px 5px 2px 2px;
+}
+
+.investments-links li:last-child{
+    border: none;
 }
 
 .investments {
-    border: 2px solid orange;
     grid-area: investments;
- 
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
  
 }
 
-
-
-
-
 .investment {
     background:#fffaf8;
     grid-gap: 20px;
-    width: 300px;
+    
     display: grid;
   
 }
@@ -211,13 +268,12 @@
 .company-header {
     background: #ffece7;  
     position: relative;
-
-
 }
 
 .company {
-    padding: 10px 10px 10px 80px;
-    
+    padding: 10px 10px 10px 80px; 
+    background: #f54121;
+    color: white;
 }
 .company-header img {
     position: absolute;
@@ -225,30 +281,21 @@
     left: 5px;
 }
 
-
 .net-worth,
 .series {
     padding-left: 80px;
 }
 
 
-
-
-.company  {
-    background: #f54121;
-    color: white;
-    
-   
-   
-}
-
 .financial-info {
     color: #333;
     padding: 10px;
+    height: 75px;
 }
 
 .investment-news {
     border-top: solid 1px #f54121;
+    height: 100px;
     padding: 10px;
     text-decoration: none;
     color: #333;
@@ -266,6 +313,7 @@
 /** Overall section wrapper */
 
 .section-wrapper {
+    grid-area: news;
     display:grid;
     
     grid-template-columns: repeat(3, 1fr);
@@ -275,8 +323,8 @@
 
 /* Individual Section Container */
 .section {
-    width: 400px;
-    margin: 20px;
+    width: 100%;
+    /*margin: 20px*/
     display: grid;
     grid-gap: 5px;
    
@@ -455,8 +503,8 @@
 *************************/
 
 .deals-wrapper {
-    margin: 0 auto;
-    width: 1200px;
+    grid-area: deals;
+   
     display: grid;
     grid-template-areas:
     "links links"
@@ -534,13 +582,30 @@
 /*************************
         Footer
 *************************/
-
+footer {
+    grid-area: footer;
+}
 
 /*************************
         Media Queries
 *************************/
 
 @media (max-width:1024px){
+.wrapper{ 
+    grid-template-columns: 5px 1fr 5px;
+    grid-template-areas: 
+    " header header header "
+    " . hero . "
+    " . ad1 . "
+    " . latest . "
+    " . ad2 . "
+    " . investments . "
+    " . news . "
+    " . deals . "
+    " . ad3 . "
+    " footer footer footer ";
+}
+
    
     /* Wrapper for all news item containers */
     .latest-news-items,
@@ -564,6 +629,10 @@
        justify-self: start;
         display: flex;
         flex-direction: column;
+    }
+
+    .investments-links li {
+        border: none;
     }
 
     .investment:last-child{
@@ -614,9 +683,11 @@
             "investments";
     }
 
+  
+
     .latest-news-item {
         display: grid;
-        width: 500px;
+        width: 100%;
         height: auto;
         grid-template-columns: auto 1fr;
         grid-gap: 10px;
@@ -627,10 +698,11 @@
 
     }
 
-    .item1-img {
+    .item-img {
         grid-area: image;
         height: 100px;
         width: 100px;
+   
     }
 
     .news-item-title {
