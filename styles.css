@@ -141,33 +141,91 @@
 /*************************
     Investments Section
 *************************/
+.investments-wrapper {
+    margin: 0 auto;
+   
+    display: grid;
+    
+    
+    grid-template-areas:
+        "header links"
+        "investments investments";
+    justify-items: center;
+    align-items: center;
+    grid-gap: 20px;
+    
+    border: 2px solid purple;
+}
+.investments-wrapper h1 a,
+.investments-wrapper li a {
+    text-decoration: none;
+    color: #f42;
+}
+
+.investments-wrapper h1 a:hover,
+.investments-wrapper li a:hover {
+    color:black;
+}
+
+
+.investments-wrapper h1{
+    border: 2px solid;
+    justify-self: start;
+   
+    
+}
+
+.investments-links {
+    border: 2px solid orange;
+    list-style-type: none;
+    grid-area: links;
+    justify-self: end;
+}
+
+.investments-links li {
+    display:inline-block;
+}
 
 .investments {
+    border: 2px solid orange;
+    grid-area: investments;
+ 
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    margin: 0 300px;
+ 
 }
+
+
+
+
 
 .investment {
     background:#fffaf8;
     grid-gap: 20px;
     width: 300px;
     display: grid;
+  
 }
 
 .company-header {
     background: #ffece7;  
     position: relative;
+
+
 }
 
+.company {
+    padding: 10px 10px 10px 80px;
+    
+}
 .company-header img {
     position: absolute;
     top: 5px;
     left: 5px;
 }
 
-.company,
+
 .net-worth,
 .series {
     padding-left: 80px;
@@ -179,12 +237,25 @@
 .company  {
     background: #f54121;
     color: white;
+    
    
    
 }
 
+.financial-info {
+    color: #333;
+    padding: 10px;
+}
+
 .investment-news {
     border-top: solid 1px #f54121;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.investment-byline {
+    color: #999;
 }
 
 
@@ -481,6 +552,25 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .investments-wrapper {
+        grid-template-areas:
+            "header ."
+            "links ."
+            "investments investments";
+        justify-items: start;
+    }
+
+    .investments-links {
+       justify-self: start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .investment:last-child{
+        display: none;
+    }
+
+
 
 }
 
@@ -496,7 +586,7 @@
     .hero-article,
     .cta,
     .top-article {
-        width: 550px;
+        width: 100vw;
         height: 170px;
     }
     
@@ -512,9 +602,16 @@
     .deals-wrapper,
     .section-wrapper,
     .latest-news-wrapper,
-    .investments{
+    .investments-wrapper{
         margin: 0;
         width: 100vw;
+    }
+
+    .investments-wrapper {
+        grid-template-areas:
+            "header"
+            "links"
+            "investments";
     }
 
     .latest-news-item {
