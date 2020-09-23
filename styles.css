@@ -98,12 +98,14 @@
 }
 
 .item1-img {
-    width: 100%;
+    width: auto;
     height: 270px;
     background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/rivian-michigan-car-legislation-future-ev-startup-sales-prevented-old-innovation-480x270.png");
     background-size: cover;
     background-position: center;
 }
+
+
 
 .news-item-title a {
     color: black;
@@ -514,6 +516,36 @@
         margin: 0;
         width: 100vw;
     }
+
+    .latest-news-item {
+        display: grid;
+        width: 500px;
+        height: auto;
+        grid-template-columns: auto 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+            "image header"
+            "image byline";
+        align-items: center;
+
+    }
+
+    .item1-img {
+        grid-area: image;
+        height: 100px;
+        width: 100px;
+    }
+
+    .news-item-title {
+        grid-area: header;
+            
+    }
+
+    .latest-news-byline {
+        grid-area: byline;
+     
+    }
+
    
     .deal{
         display: grid;
