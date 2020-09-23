@@ -50,17 +50,23 @@
 header {
     width: 100%;
     position: fixed;
+    z-index: 1;
     grid-area: header;
     background: #fdfdfd;
     display: grid;
-    grid-template-columns: 100px 1fr 300px;
+    grid-template-columns: auto 1fr auto;
     grid-template-areas:
         "logo links search"
         "cta  cta   cta"
    
 }
 
+header nav {
+    grid-area: links;
+}
+
 .header-links {
+   
     list-style-type: none;
     height: 100%;
   
@@ -96,15 +102,21 @@ header {
     margin-top: 20px;
     margin-right: 30px;
     padding-left: 15px;
+    width: 200px;
     border-left: 1px solid #eee;
 }
 .right-header img {
+  
     transform: scaleX(-1);
+}
+
+.hamburger {
+    display:none;
 }
 
 .header-cta {
     background: #ffdd33;
-    height: 40px;
+    
     grid-area: cta;
 }
 
@@ -332,6 +344,7 @@ header {
 .company-header {
     background: #ffece7;  
     position: relative;
+  
 }
 
 .company {
@@ -698,6 +711,22 @@ footer {
     " footer footer footer ";
 }
 
+.header {
+    grid-template-columns: 100px 1fr auto;
+}
+
+.header-links li:nth-last-child(-n+2){
+    display:none;
+}
+
+.right-header {
+    justify-self: end;
+    width: 50px;
+    
+}
+
+
+
    
     /* Wrapper for all news item containers */
     .latest-news-items,
@@ -736,6 +765,26 @@ footer {
 }
 
 @media (max-width: 728px){
+
+   
+    .header-links {
+        display:none;
+    }
+
+   
+
+    .hamburger { 
+        display: inline-block;
+        border-left: 1px solid #eee;
+        height: 100%;
+        margin-top: 10px;
+        padding-left: 5px;
+    }
+
+    .right-header {
+        width: 95px;
+        
+    }
 
     .hero { 
         grid-template-areas:
