@@ -136,20 +136,50 @@ header nav {
     grid-area: hero;
     display: grid;
     grid-gap: 10px;
+    grid-template-columns: 2fr 1fr;
     
     grid-template-areas:
-        "hero   hero   hero  cta"
-        "hero   hero   hero  top-article";
+        "hero  cta"
+        "hero  top-article";
 }
 
 .hero-article{
     grid-area: hero;
-    min-height: 340px;
-    min-width: 70vw;
+    max-height: 400px;
     background: white url("images/hero.jpg");
     background-size: cover;
     background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
 }
+
+.hero-article-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.byline {
+   list-style-type: none;
+
+}
+
+.byline li {
+    display: inline-block;
+    color: #bbb;
+}
+
+
+.cta,
+.top-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
 
 .cta {
     grid-area: cta;
@@ -157,6 +187,7 @@ header nav {
     background: white url("images/TNW2020.jpg");
     background-size: cover;
     background-position: left;
+
     
 }
 
@@ -816,6 +847,7 @@ footer {
         display:none;
     }
 
+  
    
 
     .hamburger { 
@@ -832,10 +864,19 @@ footer {
     }
 
     .hero { 
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
             "hero"
             "cta"
             "top-article"
+    }
+
+    .hero-article {
+        justify-content: flex-end;
+    }
+
+    .hero-article-top {
+        display:none;
     }
 
     .hero-article,
