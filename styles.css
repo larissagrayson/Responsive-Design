@@ -750,16 +750,16 @@ header nav {
 /*************************
         Footer
 *************************/
+/* Main wrapper container for the section */
 footer {
     grid-area: footer;
     height: 300px;
  
     display: flex;
-    flex-direction: column;
-
- 
+    flex-direction: column; 
 }
 
+/* Subcontainers */
 .footer-top,
 .footer-bottom {
     background: black;
@@ -772,9 +772,8 @@ footer {
 
 .footer-top {
     background: #131313;
+    padding: 30px;
 }
-
-
 
 .social-links ul,
 .footer-links ul {
@@ -785,7 +784,11 @@ footer {
 .social-links ul li,
 .footer-links ul li {
     display: inline-block;
-    padding: 10px;
+    padding: 5px;
+}
+
+.social-links {
+    margin-bottom: 20px;
 }
 
 .footer-links ul li > * {
@@ -797,7 +800,18 @@ footer {
 
 .copyright {
     color: #999;
+    display: flex;
 }
+
+.copyright a {
+    padding: 0 10px;
+}
+
+
+
+
+
+
 
 /*************************
         Media Queries
