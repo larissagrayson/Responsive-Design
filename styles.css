@@ -26,33 +26,13 @@ body {
     grid-template-areas: 
     " header header header "
     " . hero . "
-    " . ad1 . "
     " . latest . "
-    " . ad2 . "
     " . investments . "
     " . news . "
     " . deals . "
-    " . ad3 . "
     " footer footer footer ";
-
-    grid-gap: 20px;
+    grid-gap: 40px;
 }
-
-/*************************
-       Ads
-*************************/
-.ad1 {
-    grid-area: ad1;
-}
-
-.ad2 {
-    grid-area: ad2;
-}
-
-.ad3 {
-    grid-area: ad3;
-}
-
 
 /*************************
         Header
@@ -145,15 +125,18 @@ header nav {
     grid-template-areas:
         "hero  cta"
         "hero  top-article";
+
 }
 
 /* Hero article container */
 .hero-article {
     grid-area: hero;
     max-height: 400px;
+    max-width: 100vw;
     background: white url("images/hero.jpg");
     background-size: cover;
     background-position: center;
+ 
 
     display: flex;
     flex-direction: column;
@@ -206,6 +189,7 @@ header nav {
     justify-content: flex-end;
     color: white;
     padding: 10px;
+
 }
 
 .cta {
@@ -214,6 +198,7 @@ header nav {
     background: white url("images/TNW2020.jpg");
     background-size: cover;
     background-position: left;  
+   
 }
 
 .top-article {
@@ -361,7 +346,8 @@ header nav {
 
 .investments-wrapper h1{
     justify-self: start;
-    font-size: 28px;    
+    font-size: 28px;  
+    width: 200px; 
 }
 
 .investments-links {
@@ -445,7 +431,9 @@ header nav {
 
 /** Overall section wrapper */
 .section-wrapper {
+ 
     grid-area: news;
+
     display:grid;
     
     grid-template-columns: repeat(3, 1fr);
@@ -455,9 +443,9 @@ header nav {
 
 /* Individual Section Container */
 .section {
-    width: 100%;
     display: grid;
     grid-gap: 5px;
+
    
 }
 
@@ -473,7 +461,6 @@ header nav {
 
 /** Popular (Lead) Article/Image **/
 .popular{
-    width: 100%;
     height: 200px;
     background: white ;
   
@@ -481,6 +468,7 @@ header nav {
     display: flex;  
     flex-direction: column; 
     justify-content: flex-end;
+ 
 }
 
 
@@ -489,24 +477,31 @@ header nav {
     background: url("images/hindenburgnikola-368x276.jpg");
     background-size: cover;
     background-position: center;
+ 
+  
+  
 }
-
 .apps {
     background: url("images/Photoshop-Sky-Replacement-368x276.jpg");
     background-size: cover;
     background-position: center;
+  
+  
 }
 
 .gear {
     background: url("images/gear.png");
     background-size: cover;
     background-position: center;
+ 
+  
 }
 
 .tech {
     background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/07/robots-368x276.jpg");
     background-size: cover;
     background-position: top;
+
 }
 
 .popular h5 {
@@ -571,11 +566,18 @@ header nav {
 
 .apps-latest-img {
     grid-area: image;
-    height: 100px;
-    width: 100px;
-    background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/06/EbIrpRwVcAEI6ws.jpeg");
-    background-size: cover;
-    background-position: center;
+        display: grid;
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-areas: 
+        " header header header "
+        " . hero . "
+        " . latest . "
+        " . investments . "
+        " . news . "
+        " . deals . "
+        " footer footer footer ";
+        grid-gap: 40px;
+
 }
 
 .gear-latest-img {
@@ -674,24 +676,27 @@ header nav {
 
 /* Wrapper for all Deal containers */
 .deals{
+    grid-area: content;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
-    grid-area: content;
+    
 }
 
 /* Individual Deal container */
 .deal{
+    height: 300px;
     display: flex;
     flex-direction: column;
-    height: 300px;
+   
 }
 
 .deal-img {
+    height: 200px;
     background: url("https://cdnp1.stackassets.com/d2f3f6671668103cd2b2dee90fac171f712f236d/store/89d853fbd42b8ab356b517bb5fd19abf0a5cc68204960e56327147c04603/product_41976_product_shots1.jpg");
     background-size: cover;
     background-position: center ;
-    height: 270px;
+  
    
 }
 
@@ -723,10 +728,15 @@ header nav {
     background: url("https://cdnp2.stackassets.com/1f3cdb1baaea07ba05d9952161f49ca4bd3fcd84/store/fe69dffa8f144724e2336a5efb83c2d7034f1822fa64fe428121ae35021a/sale_22777_primary_image.jpg")
 }
 
-
+.deal-header {
+    padding: 5px 0;
+}
 .deal-header a {
     color: black;
     text-decoration: none;
+    line-height: 1;
+    font-size: 18px;
+    
 }
 
 .deal-header a:hover{
@@ -743,8 +753,8 @@ header nav {
 .old-price {
     color:#bbb;
     text-decoration: line-through;
+    font-size: 16px;
 }
-
 
 
 /*************************
@@ -752,9 +762,9 @@ header nav {
 *************************/
 /* Main wrapper container for the section */
 footer {
+    width: 100vw;
     grid-area: footer;
     height: 300px;
- 
     display: flex;
     flex-direction: column; 
 }
@@ -795,7 +805,6 @@ footer {
     text-decoration: none;
     color: #999;
     text-transform: uppercase;
-    
 }
 
 .copyright {
@@ -819,17 +828,15 @@ footer {
 
 @media (max-width:1024px){
 .wrapper{ 
-    grid-template-columns: 5px 1fr 5px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 20px;
     grid-template-areas: 
     " header header header "
     " . hero . "
-    " . ad1 . "
     " . latest . "
-    " . ad2 . "
     " . investments . "
     " . news . "
     " . deals . "
-    " . ad3 . "
     " footer footer footer ";
 }
 
@@ -888,7 +895,11 @@ footer {
 
 @media (max-width: 728px){
 
-   
+    .wrapper {
+        grid-template-columns:  10px 1fr 10px;
+    }
+
+     
     .header-links {
         display:none;
     }
@@ -910,12 +921,15 @@ footer {
     }
 
     .hero { 
-        grid-template-rows: repeat(3, 1fr);
+       grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);        
         grid-template-areas:
             "hero"
             "cta"
             "top-article"
     }
+
+
 
     .hero-article {
         justify-content: flex-end;
@@ -925,13 +939,7 @@ footer {
         display:none;
     }
 
-    .hero-article,
-    .cta,
-    .top-article {
-        width: 100vw;
-        height: 170px;
-    }
-    
+
   
     .latest-news-items,
     .section-wrapper,
@@ -941,13 +949,13 @@ footer {
       
     }
 
-    .deals-wrapper,
+ /*   .deals-wrapper,
     .section-wrapper,
     .latest-news-wrapper,
     .investments-wrapper{
         margin: 0;
-        width: 100vw;
-    }
+      
+    }*/
 
     .investments-wrapper {
         grid-template-areas:
