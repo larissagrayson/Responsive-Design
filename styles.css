@@ -8,6 +8,16 @@
   }
 
 /*************************
+    Default Styling
+*************************/
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+/*************************
     Main Page Wrapper
 *************************/
 .wrapper {
@@ -57,8 +67,7 @@ header {
     grid-template-columns: auto 1fr auto;
     grid-template-areas:
         "logo links search"
-        "cta  cta   cta"
-   
+        "cta  cta   cta" 
 }
 
 header nav {
@@ -66,23 +75,21 @@ header nav {
 }
 
 .header-links {
-   
-    list-style-type: none;
-    height: 100%;
-  
+    list-style-type: none;  
 }
 
 .header-links li {
     display: inline-block;
     margin-top: 20px;
+   
 }
 
 .header-links li a {
     text-decoration: none;
-    color: #666;
+    color: #777;
     text-transform: uppercase;
     padding: 10px;
-    
+    font-weight: 700;
 }
 
 .header-links li a:hover {
@@ -94,7 +101,6 @@ header nav {
     grid-area: logo;
     background: black;
     color: white;
-    height: 70px;
 }
 
 .right-header {
@@ -106,7 +112,6 @@ header nav {
     border-left: 1px solid #eee;
 }
 .right-header img {
-  
     transform: scaleX(-1);
 }
 
@@ -116,7 +121,6 @@ header nav {
 
 .header-cta {
     background: #ffdd33;
-    
     grid-area: cta;
 }
 
@@ -130,20 +134,21 @@ header nav {
 /*************************
     Hero Section
 *************************/
-.hero {
 
+/* Main wrapper for the hero section */
+.hero {
     margin-top: 95px;
     grid-area: hero;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 2fr 1fr;
-    
     grid-template-areas:
         "hero  cta"
         "hero  top-article";
 }
 
-.hero-article{
+/* Hero article container */
+.hero-article {
     grid-area: hero;
     max-height: 400px;
     background: white url("images/hero.jpg");
@@ -161,34 +166,54 @@ header nav {
     justify-content: space-between;
 }
 
+.hero-article-top,
+.hero-article-bottom {
+    padding: 10px;
+}
+
 .byline {
    list-style-type: none;
 
 }
-
 .byline li {
     display: inline-block;
     color: #bbb;
 }
 
+.article-author {
+   text-decoration: none;
+   color: #bbb;
+}
 
+.article-author:hover{
+    color: white;
+}
+
+.article-title {
+    line-height: 1;
+}
+
+.article-section {
+    text-transform: uppercase;
+    font-weight:700;
+}
+
+/* CTA and Top Article Styling */
 .cta,
 .top-article {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     color: white;
+    padding: 10px;
 }
-
 
 .cta {
     grid-area: cta;
     min-height: 150px;
     background: white url("images/TNW2020.jpg");
     background-size: cover;
-    background-position: left;
-
-    
+    background-position: left;  
 }
 
 .top-article {
@@ -205,13 +230,17 @@ header nav {
 
 /* Overall section wrapper */
 .latest-news-wrapper {
-    grid-area: latest;
-   
+    grid-area: latest;  
+}
+
+.latest-news-wrapper h1 {
+    margin-bottom: 20px;
 }
 
 .latest-news-wrapper h1 a {
     text-decoration: none;
     color: #f42;
+    font-size: 28px;
 }
     
 .latest-news-wrapper h1 a:hover {
@@ -220,7 +249,6 @@ header nav {
 
 /* Wrapper for all news item containers */
 .latest-news-items {
-  
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
@@ -235,10 +263,7 @@ header nav {
     
 }
 
-
-
 .item-img {
-    width: auto;
     height: 270px;
     background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/rivian-michigan-car-legislation-future-ev-startup-sales-prevented-old-innovation-480x270.png");
     background-size: cover;
@@ -273,6 +298,11 @@ header nav {
     background: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/09/Untitled-design-2020-09-03T133902.980-516x270.png");
 }
 
+.news-item-title {
+    line-height: 1;
+    padding: 5px 0;
+}
+
 .news-item-title a {
     color: black;
     text-decoration: none;
@@ -291,32 +321,29 @@ header nav {
 .latest-news-byline li {
     display: inline-block;
     font-size: 14px;
-    color: #999;
+    color: #555;
 }
 
 .latest-news-byline a {
-    color: #999;
+    color: #555;
     text-decoration: none;
 }
 
 .latest-news-byline a:hover {
-  
-    color: #555;
+    color: black;
 }
 
 /*************************
     Investments Section
 *************************/
+
+/* Main wrapper for the investments section */
 .investments-wrapper {
     grid-area: investments;
- 
     display: grid;
-  
     grid-template-areas:
         "header links"
         "investments investments";
-    justify-items: center;
-    align-items: center;
     grid-gap: 20px;
   
 }
@@ -333,14 +360,11 @@ header nav {
 
 
 .investments-wrapper h1{
-  
     justify-self: start;
-   
-    
+    font-size: 28px;    
 }
 
 .investments-links {
- 
     list-style-type: none;
     grid-area: links;
     justify-self: end;
@@ -348,34 +372,37 @@ header nav {
 
 .investments-links li {
     display:inline-block;
+
+}
+
+.investments-links a {
+    font-size: 18px;
     border-right: 2px solid #f42;
     padding: 2px 5px 2px 2px;
 }
 
-.investments-links li:last-child{
+.investments-links li:last-child a {
     border: none;
 }
 
+/* Main container for all investment items */
 .investments {
     grid-area: investments;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
- 
 }
 
+/* Investment item container */
 .investment {
     background:#fffaf8;
     grid-gap: 20px;
-    
     display: grid;
-  
 }
 
 .company-header {
     background: #ffece7;  
-    position: relative;
-  
+    position: relative; 
 }
 
 .company {
@@ -394,11 +421,9 @@ header nav {
     padding-left: 80px;
 }
 
-
 .financial-info {
     color: #333;
     padding: 10px;
-    height: 75px;
 }
 
 .investment-news {
@@ -419,7 +444,6 @@ header nav {
 *************************/
 
 /** Overall section wrapper */
-
 .section-wrapper {
     grid-area: news;
     display:grid;
@@ -432,11 +456,9 @@ header nav {
 /* Individual Section Container */
 .section {
     width: 100%;
-    /*margin: 20px*/
     display: grid;
     grid-gap: 5px;
    
- 
 }
 
 /** News Section Header **/
@@ -460,6 +482,8 @@ header nav {
     flex-direction: column; 
     justify-content: flex-end;
 }
+
+
 
 .hard-fork {
     background: url("images/hindenburgnikola-368x276.jpg");
@@ -610,9 +634,9 @@ header nav {
     Deals Section
 *************************/
 
+/* Main container for the section */
 .deals-wrapper {
     grid-area: deals;
-   
     display: grid;
     grid-template-areas:
     "links links"
@@ -621,7 +645,7 @@ header nav {
 }
 
 
-
+/* Header of the Deal section */
 .deals-header {
     grid-area: links;
     display:grid;
@@ -630,21 +654,25 @@ header nav {
 
 .all-deals {
     justify-self: end;
+    font-size: 18px;
 }
 
-
-
-.deals-wrapper a,
-.deals-wrapper h1 a {
+.deals-header a,
+.deals-header h1 a {
     text-decoration: none;
     color: #f42
 }
 
-.deals-wrapper a:hover,
-.deals-wrapper h1 a:hover {
+.deals-.header a:hover,
+.deals-header h1 a:hover {
     color: black;
 }
 
+.deals-header h1 {
+    font-size: 28px;
+}
+
+/* Wrapper for all Deal containers */
 .deals{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -652,16 +680,18 @@ header nav {
     grid-area: content;
 }
 
+/* Individual Deal container */
 .deal{
     display: flex;
     flex-direction: column;
+    height: 300px;
 }
 
 .deal-img {
     background: url("https://cdnp1.stackassets.com/d2f3f6671668103cd2b2dee90fac171f712f236d/store/89d853fbd42b8ab356b517bb5fd19abf0a5cc68204960e56327147c04603/product_41976_product_shots1.jpg");
     background-size: cover;
     background-position: center ;
-    height: 300px;
+    height: 270px;
    
 }
 
@@ -693,6 +723,7 @@ header nav {
     background: url("https://cdnp2.stackassets.com/1f3cdb1baaea07ba05d9952161f49ca4bd3fcd84/store/fe69dffa8f144724e2336a5efb83c2d7034f1822fa64fe428121ae35021a/sale_22777_primary_image.jpg")
 }
 
+
 .deal-header a {
     color: black;
     text-decoration: none;
@@ -706,6 +737,7 @@ header nav {
 
 .price {
     color: #333;
+    font-size: 18px;
 }
 
 .old-price {
@@ -828,7 +860,7 @@ footer {
         flex-direction: column;
     }
 
-    .investments-links li {
+    .investments-links a {
         border: none;
     }
 
@@ -912,7 +944,8 @@ footer {
 
   
 
-    .latest-news-item {
+    .latest-news-item,
+    .deal {
         display: grid;
         width: 100%;
         height: auto;
@@ -925,121 +958,27 @@ footer {
 
     }
 
-    .item-img {
-        grid-area: image;
-        height: 100px;
-        width: 100px;
-   
-    }
-
-    .news-item-title {
-        grid-area: header;
-            
-    }
-
-    .latest-news-byline {
-        grid-area: byline;
-     
-    }
-
-   
-    .deal{
-        display: grid;
-        width: 500px;
-        grid-template-columns: auto 1fr;
-        grid-template-areas:
-         "image header"
-         "image byline";
-        align-items: center;   
-    }
-
-
+    .item-img,
     .deal-img {
         grid-area: image;
         height: 100px;
         width: 100px;
+   
     }
 
+    .news-item-title,
     .deal-header {
         grid-area: header;
+            
     }
 
-    
-
-}
-
-/*
-@media (max-width:500px){
-    .hero { 
-        grid-template-areas:
-            "hero"
-            "cta"
-            "top-article"
-    }
-
-    
-    
-    .latest-news-items,
-    .investments {
-        grid-template-columns: 1fr;
-        margin: 0;
+    .latest-news-byline,
+    .price {
+        grid-area: byline;
      
-    }
-
-    .investment:last-child{
-        display: none;
-    }
-
-    .section,
-    .deals {
-        grid-template-columns: 1fr;
-    }
-}*/
-
-/*
-.test {
-
-    background: green;
-
-    width: 500px;
-
-    display: grid;
-
-    grid-template-columns: auto 1fr;
-
-    grid-template-areas:
-
-     "image header"
-
-     "image byline";
-
-     align-items: center;
+    }  
 
 }
 
 
-
-.test-img {
-
-    grid-area: image;
-
-    size: 100px;
-
-
-
-    
-
-}
-
-
-
-
-
-
-
-.deal-header {
-
-    grid-area: header;
-
-
-}*/
+   
