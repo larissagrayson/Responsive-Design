@@ -61,7 +61,6 @@ header nav {
 .header-links li {
     display: inline-block;
     margin-top: 20px;
-   
 }
 
 .header-links li a {
@@ -75,7 +74,6 @@ header nav {
 .header-links li a:hover {
     color: black;
 }
-
 
 .logo {
     grid-area: logo;
@@ -130,7 +128,6 @@ header nav {
 /* Hero article container */
 .hero-article {
     grid-area: hero;
-    max-height: 600px;
     background-image: linear-gradient(rgba(255, 0, 0, 0.38), rgba(1,1,1,.38)), url("images/hero/hero.jpg");
     background-color: white;
     background-size: cover;
@@ -190,7 +187,7 @@ header nav {
     font-weight:700;
 }
 
-/* CTA and Top Article Styling */
+/* CTA and top article styling */
 .cta,
 .top-article {
     display: flex;
@@ -450,13 +447,12 @@ header nav {
 /* Individual news section containers */
 .section {
     display: grid;
-    grid-template-rows: auto auto auto 1fr;
+    grid-template-rows: minmax(1fr, 300px) auto auto 1fr;
     grid-gap: 5px;
 
 }
 
 /** News section text heading **/
-
 .section h1 {
     align-self: end;
 }
@@ -505,7 +501,6 @@ header nav {
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-  
 }
 
 .tech {
@@ -563,8 +558,6 @@ header nav {
     background-repeat: no-repeat;
 }
 
-
-
 .header h5,
 .header h3,
 .section-byline {
@@ -602,8 +595,7 @@ header nav {
     color: white;
 }
 
-/** Latest News within Section **/
-
+/** Latest News within section **/
 .latest {
 
     background: #fff4f2;
@@ -716,11 +708,6 @@ header nav {
     background-position: 50%;
 }
 
-
-
-
-/**** ADD  ADDITIONAL SECTIONS HERE ***/
-
 .latest h5 {
     grid-area: header;
     align-self: end; 
@@ -731,8 +718,7 @@ header nav {
     align-self: start;  
 }
 
-/** Top 5 Articles in Section **/
-
+/** Top 5 Articles in section **/
 .article-list li {
     margin: 5px 20px;
     padding: 5px;
@@ -750,9 +736,6 @@ header nav {
     color: black;
 }
 
-
-
-
 /*************************
     Deals Section
 *************************/
@@ -766,7 +749,6 @@ header nav {
     "content content";
     grid-gap: 20px;
 }
-
 
 /* Header of the Deal section */
 .deals-header {
@@ -795,7 +777,7 @@ header nav {
     font-size: 28px;
 }
 
-/* Wrapper for all Deal containers */
+/* Wrapper for all deal containers */
 .deals{
     grid-area: content;
     display: grid;
@@ -804,7 +786,7 @@ header nav {
     
 }
 
-/* Individual Deal container */
+/* Individual deal container */
 .deal{
     height: 300px;
     display: flex;
@@ -934,47 +916,29 @@ footer {
 }
 
 
-
-
-
-
-
 /*************************
         Media Queries
 *************************/
 
+/* Tablet layout */
 @media (max-width:1024px){
-.wrapper{ 
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-gap: 20px;
-    grid-template-areas: 
-    " header header header "
-    " . hero . "
-    " . latest . "
-    " . investments . "
-    " . news . "
-    " . deals . "
-    " footer footer footer ";
-}
 
-.header {
-    grid-template-columns: 100px 1fr auto;
-}
+    /* Header changes */
+    .header {
+        grid-template-columns: 100px 1fr auto;
+    }
 
-.header-links li:nth-last-child(-n+2){
-    display:none;
-}
+    .header-links li:nth-last-child(-n+2){
+        display:none;
+    }
 
-.right-header {
-    justify-self: end;
-    width: 50px;
-    
-}
-
-
+    .right-header {
+        justify-self: end;
+        width: 50px; 
+    }
 
    
-    /* Wrapper for all news item containers */
+    /* Section wrapper changes*/
     .latest-news-items,
     .deals { 
         grid-template-columns: repeat(3, 1fr);
@@ -986,16 +950,21 @@ footer {
 
     .investments-wrapper {
         grid-template-areas:
-            "header ."
-            "links ."
-            "investments investments";
+            "header               ."
+            "links                ."
+            "investments    investments";
         justify-items: start;
+    }
+
+    /* Changes to the investments layout */
+    .investments {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .investments-links {
        justify-self: start;
-        display: flex;
-        flex-direction: column;
+       display: flex;
+       flex-direction: column;
     }
 
     .investments-links a {
@@ -1005,24 +974,20 @@ footer {
     .investment:last-child{
         display: none;
     }
-
-
-
 }
 
+/* Smartphone layout */
 @media (max-width: 728px){
 
+    /* Main page layout changes */
     .wrapper {
         grid-template-columns:  10px 1fr 10px;
     }
 
-     
+    /* Header changes */ 
     .header-links {
         display:none;
-    }
-
-  
-   
+    }   
 
     .hamburger { 
         display: inline-block;
@@ -1033,10 +998,10 @@ footer {
     }
 
     .right-header {
-        width: 95px;
-        
+        width: 95px; 
     }
 
+    /* Changes to Hero layout */
     .hero { 
        grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);        
@@ -1046,8 +1011,6 @@ footer {
             "top-article"
     }
 
-
-
     .hero-article {
         justify-content: flex-end;
     }
@@ -1056,8 +1019,7 @@ footer {
         display:none;
     }
 
-
-  
+    /* Changes to page section layouts */
     .latest-news-items,
     .section-wrapper,
     .deals,
@@ -1066,14 +1028,7 @@ footer {
       
     }
 
- /*   .deals-wrapper,
-    .section-wrapper,
-    .latest-news-wrapper,
-    .investments-wrapper{
-        margin: 0;
-      
-    }*/
-
+    /* Changes to investment layout */
     .investments-wrapper {
         grid-template-areas:
             "header"
@@ -1082,7 +1037,7 @@ footer {
     }
 
   
-
+    /* Changes to image layouts for Latest News and Deals */
     .latest-news-item,
     .deal {
         display: grid;
@@ -1093,8 +1048,7 @@ footer {
         grid-template-areas:
             "image header"
             "image byline";
-        align-items: center;
-
+        align-items: start;
     }
 
     .item-img,
@@ -1102,21 +1056,18 @@ footer {
         grid-area: image;
         height: 100px;
         width: 100px;
-   
     }
 
     .news-item-title,
     .deal-header {
-        grid-area: header;
-            
+        grid-area: header;  
     }
 
     .latest-news-byline,
     .price {
         grid-area: byline;
-     
+        align-self: start;
     }  
-
 }
 
 
