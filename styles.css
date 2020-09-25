@@ -526,6 +526,45 @@ header nav {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.podium {
+    height: 276px;
+    background: linear-gradient( rgba(1, 1, 1, 0.01), rgba(1, 1, 1, 0.8)), url("images/news-sections/podium.png");
+    background-color: white;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.insights {
+    height: 276px;
+    background: linear-gradient( rgba(1, 1, 1, 0.01), rgba(1, 1, 1, 0.8)), url("images/news-sections/insights.jpg");
+    background-color: white;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.launch {
+    height: 276px;
+    background: linear-gradient( rgba(1, 1, 1, 0.01), rgba(1, 1, 1, 0.8)), url("images/news-sections/launch.jpg");
+    background-color: white;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.distract {
+    height: 276px;
+    background: linear-gradient( rgba(1, 1, 1, 0.01), rgba(1, 1, 1, 0.8)), url("images/news-sections/distract.png");
+    background-color: white;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
 .header h5,
 .header h3,
 .section-byline {
@@ -616,7 +655,7 @@ header nav {
 .apps-img-small {
     height: 96px;
     width: 96px;
-    background: url("images/news-sections/gear-small.jpg");    
+    background: url("images/news-sections/apps-small.jpg");    
     background-size: cover;
     background-position: 50%;
 }
@@ -635,7 +674,6 @@ header nav {
     background: url("images/news-sections/tech-small.jpg");
     background-size: cover;
     background-position: 50%;
-   
 }
 
 .creative-latest-img-small{
@@ -644,8 +682,42 @@ header nav {
     background: url("images/news-sections/creative-small.jpg");
     background-size: cover;
     background-position: 50%;
-   
 }
+
+.podium-latest-img-small{
+    height: 96px;
+    width: 96px;
+    background: url("images/news-sections/podium-small.jpg");
+    background-size: cover;
+    background-position: 50%; 
+}
+
+.insights-latest-img-small{
+    height: 96px;
+    width: 96px;
+    background: url("images/news-sections/insights-small.jpg");
+    background-size: cover;
+    background-position: 50%;
+}
+
+.launch-latest-img-small{
+    height: 96px;
+    width: 96px;
+    background: url("images/news-sections/launch-small.png");
+    background-size: cover;
+    background-position: 50%;
+}
+
+.distract-latest-img-small{
+    height: 96px;
+    width: 96px;
+    background: url("images/news-sections/distract-small.jpg");
+    background-size: cover;
+    background-position: 50%;
+}
+
+
+
 
 /**** ADD  ADDITIONAL SECTIONS HERE ***/
 
