@@ -152,6 +152,11 @@ header nav {
     padding: 10px;
 }
 
+.date {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
 .byline {
    list-style-type: none;
 
@@ -477,7 +482,8 @@ header nav {
 
 .hard-fork {
     height: 276px;
-    background: white  url("images/news-sections/hardfork.jpg");
+    background:linear-gradient( rgba(1, 1, 1, 0.01), rgba(1, 1, 1, 0.8)), url("images/news-sections/hardfork.jpg");
+    background-color: white;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -485,7 +491,8 @@ header nav {
 
 .apps {
     height: 276px;
-    background: white url("images/news-sections/apps.jpg");
+    background: linear-gradient( rgba(1, 1, 1, 0.01), rgba(1, 1, 1, 0.8)), url("images/news-sections/apps.jpg");
+    background-color: white;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -493,7 +500,8 @@ header nav {
 
 .gear {
     height: 276px;
-    background: white url("images/news-sections/gear.png");
+    background: linear-gradient( rgba(1, 1, 1, 0.01), rgba(1, 1, 1, 0.8)), url("images/news-sections/gear.png");
+    background-color: white;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -502,15 +510,31 @@ header nav {
 
 .tech {
     height: 276px;
-    background: url("images/news-sections/tech.jpg");
+    background: linear-gradient( rgba(1, 1, 1, 0.01), rgba(1, 1, 1, 0.8)), url("images/news-sections/tech.jpg");
+    background-color: white;
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+
+.creative {
+    height: 276px;
+    background: linear-gradient( rgba(1, 1, 1, 0.01), rgba(1, 1, 1, 0.8)), url("images/news-sections/creative.png");
+    background-color: white;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header h5,
+.header h3,
+.section-byline {
+    padding: 5px 10px;
+
+}
+
 .header h5 {
     text-transform: uppercase; 
-    padding: 5px;
 }
 
 .header a {
@@ -527,6 +551,7 @@ header nav {
     display: inline-block;
     font-size: 14px;
     color: #ccc;
+    margin-bottom: 5px;
 }
 
 .section-byline a {
@@ -541,17 +566,27 @@ header nav {
 /** Latest News within Section **/
 
 .latest {
- 
-    border: 2px solid black;
+
     background: #fff4f2;
     display: grid;
     grid-template-columns: 1fr 100px;
     grid-template-areas:
         "header image"
         "title  image";
-
-   
     color: #f42;
+}
+
+.latest > * { 
+    padding: 0 5px;
+    line-height: 1.2;
+    margin-left: 5px;
+}
+
+.latest h5 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 3px; 
 }
 
 .latest a {
@@ -603,7 +638,16 @@ header nav {
    
 }
 
-/**** ADD ***/
+.creative-latest-img-small{
+    height: 96px;
+    width: 96px;
+    background: url("images/news-sections/creative-small.jpg");
+    background-size: cover;
+    background-position: 50%;
+   
+}
+
+/**** ADD  ADDITIONAL SECTIONS HERE ***/
 
 .latest h5 {
     grid-area: header;
@@ -616,11 +660,6 @@ header nav {
 }
 
 /** Top 5 Articles in Section **/
-
-.article-list {
- 
-    border: 2px solid red;
-}
 
 .article-list li {
     margin: 5px 20px;
