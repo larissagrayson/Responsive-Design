@@ -923,6 +923,11 @@ footer {
 /* Tablet layout */
 @media (max-width:1024px){
 
+      /* Main page layout changes */
+      .wrapper {
+        grid-template-columns:  5px 1fr 5px;
+    }
+
     /* Header changes */
     .header {
         grid-template-columns: 100px 1fr auto;
@@ -936,7 +941,6 @@ footer {
         justify-self: end;
         width: 50px; 
     }
-
    
     /* Section wrapper changes*/
     .latest-news-items,
