@@ -7,6 +7,8 @@
 
 **OBJECTIVE:** The purpose of this project was to build a responsive website for PC, tablet, and smartphone.  The project recreates the homepage of [The Next Web](http://thenextweb.com/). It is laid out using a combination of CSS Grid and Flexbox and follows The Next Web's breakpoints of 1024px for tablets and 728px for smartphones. 
 
+The page can be viewed [here](https://larissagrayson.github.io/Responsive-Design/).
+
 **SKILLS DEMONSTRATED:**
 * CSS Grid
 * CSS Flexbox
